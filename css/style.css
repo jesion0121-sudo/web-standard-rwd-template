@@ -20,7 +20,7 @@ a {
 body {
     font-family: "Noto Sans KR", sans-serif;
     color: #333333;
-    background-color: #F5F3FF;
+    background: #E9F4FF;
 }
 
 h1,
@@ -28,4 +28,282 @@ h2,
 h3 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: normal;
+}
+
+/* header #top */
+#top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff50;
+    width: 100%;
+    padding: 2.4rem 30rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+h1{
+    font-size: 2.8rem;
+}
+#top ul{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 1.6rem;
+}
+
+/* hero */
+.hero{
+    height: 510px;
+    background: url(../img/풍선.jpg) no-repeat center 85%/cover;
+    display: block;
+    align-content: center;
+    padding-top: 50px;
+}
+.hero-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+.hero-txt .sub{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.hero-txt h2{
+    font-size: 12rem;
+    font-family: 'Do Hyeon';
+    color: #2447D6;
+}
+/* .hero-txt h2::first-letter{
+    color: #FF4F9A;
+} */
+.hero-txt p:nth-child(3){
+    font-size: 1.6rem;
+}
+.hero-txt a{
+    display: inline-block;
+    background-color: #FF4F9A;
+    font-size: 1.6rem;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* main, profile */
+main h2{
+    font-size: 3rem;
+}
+main{
+    width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    margin: auto;
+}
+.profile {
+    margin: -40px 0 ;
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 32px;
+    width: 1200px;
+    height: 152px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    /* position: absolute;
+    top: -40px;
+    gap: 24px; */
+}
+.avatar{
+    font-size: 5.2rem;
+    display: block;
+    background-color: #D3E4F5;
+    border-radius: 50%;
+    padding: 5px 5px;
+}
+.intro-box{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.intro h3{
+    font-size: 2.4rem;
+    font-family: 'Do Hyeon';
+}
+.intro p{
+    font-size: 1.6rem;
+}
+.tags{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+}
+.tags li{
+    /* display: block; */
+    background-color: #D3E4F5;
+    color: #2447D6;
+    border-radius: 20px;
+    padding: 6px 12px;
+}
+
+/* #posts */
+
+#posts{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+#posts article{
+    border-radius: 16px;
+    border: 5px solid #D3E4F5;
+    background-color: white;
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+}
+.thumb{
+    position: relative;
+}
+.thumb span{
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #333333;
+    background-color: #D3E4F5;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+#posts article img{
+    width: 400px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#posts article:nth-child(2) img{
+    object-position: top;
+}
+#posts article:nth-child(3) img{
+    object-position: bottom;
+}
+#posts article:nth-child(4) img{
+    object-position: center 78%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cate{
+    font-size: 1.3rem;
+    color: #2447D6;
+}
+
+.info h3{
+    font-size: 2.4rem;
+}
+
+.info p{
+    font-size: 1.6rem;
+    width: 390px;
+    height: 52px;
+}
+.info a{
+    font-size: 1.6rem;
+    color: #2447D6;
+    font-weight: bold;
+}
+#posts article:nth-child(3){
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#posts article:hover{
+    background-color: #D3E4F5;
+}
+
+/* #photos */
+
+#photos{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: 1200px;
+}
+.photos{
+    height: 336px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+}
+.photos li{
+    background-color: #D3E4F5;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.photos li span{
+    font-size: 6.2rem;
+}
+.photos li p{
+    font-size: 1.6rem;
+}
+
+.p1 {
+    grid-column: span 2;
+}
+.p3 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.p5{
+    grid-column: span 2;
+}
+
+
+/* footer */
+
+footer p{
+    margin-top: 80px;
+    padding: 30px 40px;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: #1E2A44;
+    color: #FFFFFF;
+}
+
+/* top */
+.top{
+    position: fixed;
+    display: block;
+    z-index: 2;
+    left: calc(50% + 700px);
+    bottom: 400px;
+    background-color: #1E2A44;
+    color: #FFFFFF;
+    width: 56px;
+    height: 56px;
+    font-size: 13px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
 }
