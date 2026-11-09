@@ -31,7 +31,7 @@ h3 {
 }
 
 /* header #top */
-#top{
+#top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,10 +42,12 @@ h3 {
     top: 0;
     z-index: 1;
 }
-h1{
+
+h1 {
     font-size: 2.8rem;
 }
-#top ul{
+
+#top ul {
     display: flex;
     align-items: center;
     gap: 28px;
@@ -53,14 +55,16 @@ h1{
 }
 
 /* hero */
-.hero{
+.hero {
     height: 51rem;
     background: url(../img/풍선.jpg) no-repeat center 85%/cover;
     display: block;
     align-content: center;
     padding-top: 50px;
+    position: relative;
 }
-.hero-txt{
+
+.hero-txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,23 +72,43 @@ h1{
     gap: 16px;
     text-align: center;
 }
-.hero-txt .sub{
+
+.hero-txt .sub {
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 6px;
 }
-.hero-txt h2{
+
+.hero-txt h2 {
     font-size: 12rem;
     font-family: 'Do Hyeon';
     color: #2447D6;
 }
+
 /* .hero-txt h2::first-letter{
     color: #FF4F9A;
 } */
-.hero-txt p:nth-child(3){
+.hero-txt p:nth-child(3) {
     font-size: 1.6rem;
 }
-.hero-txt a{
+.hero .pin2 {
+    position: absolute;
+    width: 429px;
+    height: 550px;
+    top: 6px;
+    left: calc(50% - 900px);
+    transform: rotate(-30deg);
+}
+.hero .pin1 {
+    position: absolute;
+    width: 349px;
+    height: 349px;
+    top: 6px;
+    left: calc(50% + 500px);
+    transform: rotate(15deg);
+}
+
+.hero-txt a {
     display: inline-block;
     background-color: #FF4F9A;
     font-size: 1.6rem;
@@ -94,10 +118,11 @@ h1{
 }
 
 /* main, profile */
-main h2{
+main h2 {
     font-size: 3rem;
 }
-main{
+
+main {
     width: 1200px;
     position: relative;
     display: flex;
@@ -106,8 +131,9 @@ main{
     align-items: center;
     margin: auto;
 }
+
 .profile {
-    margin: -40px 0 ;
+    margin: -40px 0;
     display: flex;
     justify-content: space-between;
     padding: 28px 32px;
@@ -120,33 +146,39 @@ main{
     top: -40px;
     gap: 24px; */
 }
-.avatar{
+
+.avatar {
     font-size: 5.2rem;
     display: block;
     background-color: #D3E4F5;
     border-radius: 50%;
     padding: 5px 5px;
 }
-.intro-box{
+
+.intro-box {
     display: flex;
     gap: 24px;
     align-items: center;
 }
-.intro h3{
+
+.intro h3 {
     font-size: 2.4rem;
     font-family: 'Do Hyeon';
 }
-.intro p{
+
+.intro p {
     font-size: 1.6rem;
 }
-.tags{
+
+.tags {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
     font-size: 1.4rem;
 }
-.tags li{
+
+.tags li {
     /* display: block; */
     background-color: #D3E4F5;
     color: #2447D6;
@@ -156,13 +188,14 @@ main{
 
 /* #posts */
 
-#posts{
+#posts {
     font-size: 3rem;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-#posts article{
+
+#posts article {
     border-radius: 16px;
     border: 5px solid #D3E4F5;
     background-color: white;
@@ -173,10 +206,12 @@ main{
     width: 1200px;
     height: 300px;
 }
-.thumb{
+
+.thumb {
     position: relative;
 }
-.thumb span{
+
+.thumb span {
     position: absolute;
     left: 12px;
     top: 12px;
@@ -186,73 +221,81 @@ main{
     border-radius: 20px;
     padding: 4px 10px;
 }
-#posts article img{
+
+#posts article img {
     width: 400px;
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
 }
 
-#posts article:nth-child(2) img{
+#posts article:nth-child(2) img {
     object-position: top;
 }
-#posts article:nth-child(3) img{
+
+#posts article:nth-child(3) img {
     object-position: bottom;
 }
-#posts article:nth-child(4) img{
+
+#posts article:nth-child(4) img {
     object-position: center 78%;
 }
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.cate{
+.cate {
     font-size: 1.3rem;
     color: #2447D6;
 }
 
-.info h3{
+.info h3 {
     font-size: 2.4rem;
 }
 
-.info p{
+.info p {
     font-size: 1.6rem;
     width: 390px;
     height: 52px;
 }
-.info a{
+
+.info a {
     font-size: 1.6rem;
     color: #2447D6;
     font-weight: bold;
 }
-#posts article:nth-child(3){
+
+#posts article:nth-child(3) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
 
-#posts article:hover{
+#posts article:hover {
     background-color: #D3E4F5;
 }
 
 /* #photos */
 
-#photos{
+#photos {
     display: flex;
     gap: 24px;
     flex-direction: column;
     width: 1200px;
 }
-.photos{
+
+.photos {
     height: 336px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 16px;
 }
-.photos li{
+
+.photos li {
     background-color: #D3E4F5;
     display: flex;
     flex-direction: column;
@@ -261,28 +304,32 @@ main{
     align-items: center;
     border-radius: 12px;
 }
-.photos li span{
+
+.photos li span {
     font-size: 6.2rem;
 }
-.photos li p{
+
+.photos li p {
     font-size: 1.6rem;
 }
 
 .p1 {
     grid-column: span 2;
 }
+
 .p3 {
     grid-column: span 2;
     grid-row: span 2;
 }
-.p5{
+
+.p5 {
     grid-column: span 2;
 }
 
 
 /* footer */
 
-footer p{
+footer p {
     margin-top: 80px;
     padding: 30px 40px;
     text-align: center;
@@ -292,7 +339,7 @@ footer p{
 }
 
 /* top */
-.top{
+.top {
     position: fixed;
     display: block;
     z-index: 2;
