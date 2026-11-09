@@ -37,7 +37,7 @@ h3 {
     align-items: center;
     background-color: #ffffff50;
     width: 100%;
-    padding: 2.4rem 30rem;
+    padding: 2.4rem 10%;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -54,7 +54,7 @@ h1{
 
 /* hero */
 .hero{
-    height: 510px;
+    height: 51rem;
     background: url(../img/풍선.jpg) no-repeat center 85%/cover;
     display: block;
     align-content: center;
