@@ -50,7 +50,7 @@ h1 {
 #top ul {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 2.8rem;
     font-size: 1.6rem;
 }
 
@@ -60,7 +60,7 @@ h1 {
     background: url(../img/풍선.jpg) no-repeat center 85%/cover;
     display: block;
     align-content: center;
-    padding-top: 50px;
+    padding-top: 5rem;
     position: relative;
 }
 
@@ -69,14 +69,14 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 1.6rem;
     text-align: center;
 }
 
 .hero-txt .sub {
     font-size: 1.3rem;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 0.6rem;
 }
 
 .hero-txt h2 {
@@ -84,27 +84,44 @@ h1 {
     font-family: 'Do Hyeon';
     color: #2447D6;
 }
-
-/* .hero-txt h2::first-letter{
+.hero-txt h2 span:nth-child(even){
     color: #FF4F9A;
+    /* animation-delay: 0.5s; */
+}
+
+.hero-txt span {
+    display: inline-block;
+    /* animation: pongdang 1s infinite; */
+}
+
+/* @keyframes pongdang {
+    0% 100% {color : #2447D6; transform : translateY(0);}
+    50% {color : #2447D6; transform: translateY(-10px);}
 } */
+
 .hero-txt p:nth-child(3) {
     font-size: 1.6rem;
 }
 .hero .pin2 {
     position: absolute;
-    width: 429px;
-    height: 550px;
-    top: 6px;
-    left: calc(50% - 900px);
+    width: 42.9rem;
+    height: 55rem;
+    top: 0.6rem;
+    left: calc(50% - 90rem);
     transform: rotate(-30deg);
+    animation: pang 1s infinite;
 }
+
+@keyframes pang {
+
+}
+
 .hero .pin1 {
     position: absolute;
-    width: 349px;
-    height: 349px;
-    top: 6px;
-    left: calc(50% + 500px);
+    width: 34.9rem;
+    height: 34.9rem;
+    top: 0.6rem;
+    left: calc(50% + 50rem);
     transform: rotate(15deg);
 }
 
@@ -112,8 +129,8 @@ h1 {
     display: inline-block;
     background-color: #FF4F9A;
     font-size: 1.6rem;
-    padding: 12px 28px;
-    border-radius: 30px;
+    padding: 1.2rem 2.8rem;
+    border-radius: 3rem;
     font-weight: bold;
 }
 
@@ -123,25 +140,25 @@ main h2 {
 }
 
 main {
-    width: 1200px;
+    width: 120rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 8rem;
     align-items: center;
     margin: auto;
 }
 
 .profile {
-    margin: -40px 0;
+    margin: -4rem 0;
     display: flex;
     justify-content: space-between;
-    padding: 28px 32px;
-    width: 1200px;
-    height: 152px;
+    padding: 2.8rem 3.2rem;
+    width: 120rem;
+    height: 15.2rem;
     align-items: center;
     background-color: #FFFFFF;
-    border-radius: 16px;
+    border-radius: 1.6rem;
     /* position: absolute;
     top: -40px;
     gap: 24px; */
@@ -152,12 +169,12 @@ main {
     display: block;
     background-color: #D3E4F5;
     border-radius: 50%;
-    padding: 5px 5px;
+    padding: 0.5rem 0.5rem;
 }
 
 .intro-box {
     display: flex;
-    gap: 24px;
+    gap: 2.4rem;
     align-items: center;
 }
 
@@ -174,7 +191,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 0.8rem;
     font-size: 1.4rem;
 }
 
@@ -182,8 +199,8 @@ main {
     /* display: block; */
     background-color: #D3E4F5;
     color: #2447D6;
-    border-radius: 20px;
-    padding: 6px 12px;
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
 }
 
 /* #posts */
@@ -192,19 +209,19 @@ main {
     font-size: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 2.4rem;
 }
 
 #posts article {
-    border-radius: 16px;
-    border: 5px solid #D3E4F5;
+    border-radius: 1.6rem;
+    border: 0.5rem solid #D3E4F5;
     background-color: white;
     display: flex;
-    gap: 50px;
-    padding: 40px;
+    gap: 5rem;
+    padding: 4rem;
     align-items: center;
-    width: 1200px;
-    height: 300px;
+    width: 120rem;
+    height: 30rem;
 }
 
 .thumb {
@@ -213,20 +230,20 @@ main {
 
 .thumb span {
     position: absolute;
-    left: 12px;
-    top: 12px;
+    left: 1.2rem;
+    top: 1.2rem;
     color: #333333;
     background-color: #D3E4F5;
     font-size: 1.3rem;
-    border-radius: 20px;
-    padding: 4px 10px;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
 }
 
 #posts article img {
-    width: 400px;
-    height: 220px;
+    width: 40rem;
+    height: 22rem;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 1.2rem;
 }
 
 #posts article:nth-child(2) img {
@@ -244,7 +261,7 @@ main {
 .info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .cate {
@@ -258,8 +275,8 @@ main {
 
 .info p {
     font-size: 1.6rem;
-    width: 390px;
-    height: 52px;
+    width: 39rem;
+    height: 5.2rem;
 }
 
 .info a {
@@ -282,27 +299,28 @@ main {
 
 #photos {
     display: flex;
-    gap: 24px;
+    gap: 2.4rem;
     flex-direction: column;
-    width: 1200px;
+    width: 120rem;
 }
 
 .photos {
-    height: 336px;
+    height: 33.6rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: 16px;
+    grid-template-rows: 16rem 16rem;
+    gap: 1.6rem;
+    grid-template-areas: "p1 p1 p2 p3 p3" "p4 p5 p5 p3 p3";
 }
 
 .photos li {
     background-color: #D3E4F5;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 0.6rem;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 1.2rem;
 }
 
 .photos li span {
@@ -314,24 +332,27 @@ main {
 }
 
 .p1 {
-    grid-column: span 2;
+    grid-area: p1;
 }
-
+.p2 {
+    grid-area: p2;
+}
 .p3 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: p3;
 }
-
+.p4 {
+    grid-area: p4;
+}
 .p5 {
-    grid-column: span 2;
+    grid-area: p5;
 }
 
 
 /* footer */
 
 footer p {
-    margin-top: 80px;
-    padding: 30px 40px;
+    margin-top: 8rem;
+    padding: 3rem 4rem;
     text-align: center;
     font-size: 1.6rem;
     background-color: #1E2A44;
@@ -343,13 +364,13 @@ footer p {
     position: fixed;
     display: block;
     z-index: 2;
-    left: calc(50% + 700px);
-    bottom: 400px;
+    left: calc(50% + 70rem);
+    bottom: 10rem;
     background-color: #1E2A44;
     color: #FFFFFF;
-    width: 56px;
-    height: 56px;
-    font-size: 13px;
+    width: 5.6rem;
+    height: 5.6rem;
+    font-size: 1.3rem;
     border-radius: 50%;
     text-align: center;
     align-content: center;
