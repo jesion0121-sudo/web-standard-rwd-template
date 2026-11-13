@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
 }
+/* 0.625vw쓰면 안 되나? */
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@ html {
     box-sizing: border-box;
 }
 
-ul {
+ul, ol {
     list-style: none;
 }
 
@@ -40,7 +41,7 @@ h3 {
     padding: 2.4rem 10%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 h1 {
@@ -56,11 +57,11 @@ h1 {
 
 /* hero */
 .hero {
-    height: 51rem;
+    /* height: 51rem; */
     background: url(../img/풍선.jpg) no-repeat center 85%/cover;
     display: block;
     align-content: center;
-    padding-top: 5rem;
+    padding: 15rem 0 10rem 0;
     position: relative;
 }
 
@@ -80,28 +81,29 @@ h1 {
 }
 
 .hero-txt h2 {
-    font-size: 12rem;
-    font-family: 'Do Hyeon';
+    font-size: 6rem;
     color: #2447D6;
 }
-.hero-txt h2 span:nth-child(even){
+
+.hero-txt h2 span:nth-child(even) {
     color: #FF4F9A;
-    /* animation-delay: 0.5s; */
+    animation-delay: 0.5s;
 }
 
 .hero-txt span {
     display: inline-block;
-    /* animation: pongdang 1s infinite; */
+    animation: pongdang 1s infinite;
 }
 
-/* @keyframes pongdang {
-    0% 100% {color : #2447D6; transform : translateY(0);}
-    50% {color : #2447D6; transform: translateY(-10px);}
-} */
+@keyframes pongdang {
+    0%, 100% {; transform : translateY(0);}
+    50% {color : #2447D6; transform: translateY(-5px);}
+}
 
 .hero-txt p:nth-child(3) {
     font-size: 1.6rem;
 }
+
 .hero .pin2 {
     position: absolute;
     width: 42.9rem;
@@ -109,11 +111,6 @@ h1 {
     top: 0.6rem;
     left: calc(50% - 90rem);
     transform: rotate(-30deg);
-    animation: pang 1s infinite;
-}
-
-@keyframes pang {
-
 }
 
 .hero .pin1 {
@@ -128,6 +125,7 @@ h1 {
 .hero-txt a {
     display: inline-block;
     background-color: #FF4F9A;
+    color: white;
     font-size: 1.6rem;
     padding: 1.2rem 2.8rem;
     border-radius: 3rem;
@@ -140,13 +138,15 @@ main h2 {
 }
 
 main {
-    width: 120rem;
+    padding: 0.7rem;
+    margin: auto;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 8rem;
     align-items: center;
-    margin: auto;
+    max-width: 120rem;
 }
 
 .profile {
@@ -154,7 +154,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 2.8rem 3.2rem;
-    width: 120rem;
+    width: 100%;
     height: 15.2rem;
     align-items: center;
     background-color: #FFFFFF;
@@ -180,7 +180,6 @@ main {
 
 .intro h3 {
     font-size: 2.4rem;
-    font-family: 'Do Hyeon';
 }
 
 .intro p {
@@ -203,16 +202,173 @@ main {
     padding: 0.6rem 1.2rem;
 }
 
+/* #inform */
+
+#inform{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+}
+#inform>div{
+    background-color: #FFFFFF;
+    border-radius: 1.6rem;
+}
+#inform ul{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #DEDEDE;
+    gap: 2.4rem;
+    padding-left: 2rem ;
+}
+#inform ul li {
+    padding: 2rem 0 1rem;
+    border-bottom: 3px solid transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: border-color .3s ease, transform .3 ease;
+}
+#inform ul li:hover{
+    border-bottom: 3px solid #FF4F9A;
+}
+#inform ul li.active{
+    font-weight: bold;
+    border-bottom: 3px solid #FF4F9A;
+    text-transform: uppercase;
+}
+#inform ul a {
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-left: auto;
+}
+#inform .inform-poster{
+    padding: 2rem;
+    /* display: none; */
+}
+#inform .inform-poster li{
+    /* display: flex; */
+    display: none;
+    gap: 2rem;
+}
+#inform .inform-poster li.active{
+    display: flex;
+}
+#inform .inform-poster article{
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    width: 50%;
+    background-color: #E9F4FF;
+}
+#inform .inform-poster li.active article {
+    animation: fadeUp .5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#inform .inform-poster article .poster-img{
+    position: relative;
+    display: block;
+    width: 28rem;
+    height: 32rem;
+    background: radial-gradient(circle at top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7)), var(--img) center/cover;
+}
+#inform .poster-img span{
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background-color: #FF4F9A;
+    padding: .5rem 1rem;
+    color: #FFFFFF;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#inform .inform-poster article .poster-t-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2.9rem 1.5rem 0;
+}
+#inform .inform-poster article .poster-t-wrap h3{
+    font-size: 2.5rem;
+}
+#inform .inform-poster article .poster-t-wrap dl{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-between;
+    gap: 2rem;
+}
+#inform .inform-poster article .poster-t-wrap dt{
+    font-size: 1.6rem;
+    font-family: 'Do Hyeon';
+}
+#inform .inform-poster article .poster-t-wrap dd{
+    text-align: end;
+    font-size: 1.4rem;
+}
+#inform .inform-poster article .poster-t-wrap a{
+    display: block;
+    margin-top: auto;
+    background-color: #D3E4F5;
+    border-radius: 3rem;
+    font-weight: bold;
+    padding: 1.2rem 2.8rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* 이미지 변경하기 */
+#inform .inform-poster .poster-img.soon1{
+    --img : url(/img/soon1.png);
+}
+#inform .inform-poster .poster-img.soon2{
+    --img : url(/img/soon2.png);
+}
+#inform .inform-poster .poster-img.now1{
+    --img : url(/img/now1.png);
+}
+#inform .inform-poster .poster-img.now2{
+    --img : url(/img/인천소란스런가을밤.png);
+}
+#inform .inform-poster .poster-img.popular1{
+    --img : url(/img/popular1.png);
+}
+#inform .inform-poster .poster-img.popular2{
+    --img : url(/img/인천소란스런가을밤.png);
+}
+#inform .inform-poster .poster-img.picks1{
+    --img : url(/img/pick1.png);
+}
+#inform .inform-poster .poster-img.picks2{
+    --img : url(/img/pick2.png);
+}
+
+
+
+/* background: url(/img/인천소란스런가을밤.png); */
 /* #posts */
 
 #posts {
-    font-size: 3rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
 }
 
-#posts article {
+.post {
     border-radius: 1.6rem;
     border: 0.5rem solid #D3E4F5;
     background-color: white;
@@ -220,15 +376,19 @@ main {
     gap: 5rem;
     padding: 4rem;
     align-items: center;
-    width: 120rem;
+    width: 100%;
     height: 30rem;
 }
 
 .thumb {
+    width: 40rem;
+    height: 22rem;
     position: relative;
+    overflow: hidden;
+    border-radius: 1.2rem;
 }
 
-.thumb span {
+.thumb .date {
     position: absolute;
     left: 1.2rem;
     top: 1.2rem;
@@ -237,13 +397,29 @@ main {
     font-size: 1.3rem;
     border-radius: 2rem;
     padding: 0.4rem 1rem;
+    z-index: 1;
 }
 
-#posts article img {
-    width: 40rem;
+/* .thumb .bg{
+    width: 100%;
+    background-color: #D3E4F5;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    } */
+
+.thumb img {
+    width: 100%;
     height: 22rem;
     object-fit: cover;
-    border-radius: 1.2rem;
+    transition: all .3s;
+    /* transform: scale(1); */
+    display: block;
 }
 
 #posts article:nth-child(2) img {
@@ -256,6 +432,10 @@ main {
 
 #posts article:nth-child(4) img {
     object-position: center 78%;
+}
+
+.post:hover .thumb img {
+    transform: scale(1.05);
 }
 
 .info {
@@ -275,8 +455,8 @@ main {
 
 .info p {
     font-size: 1.6rem;
-    width: 39rem;
-    height: 5.2rem;
+    /* width: 39rem;
+    height: 5.2rem; */
 }
 
 .info a {
@@ -301,11 +481,12 @@ main {
     display: flex;
     gap: 2.4rem;
     flex-direction: column;
-    width: 120rem;
+    justify-content: center;
+    width: 100%;
 }
 
 .photos {
-    height: 33.6rem;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 16rem 16rem;
@@ -334,15 +515,19 @@ main {
 .p1 {
     grid-area: p1;
 }
+
 .p2 {
     grid-area: p2;
 }
+
 .p3 {
     grid-area: p3;
 }
+
 .p4 {
     grid-area: p4;
 }
+
 .p5 {
     grid-area: p5;
 }
@@ -364,7 +549,7 @@ footer p {
     position: fixed;
     display: block;
     z-index: 2;
-    left: calc(50% + 70rem);
+    left: 95%;
     bottom: 10rem;
     background-color: #1E2A44;
     color: #FFFFFF;
@@ -374,4 +559,16 @@ footer p {
     border-radius: 50%;
     text-align: center;
     align-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+body.scroll .top{
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.scroll header{
+    background-color: #ffffffb3;
+    backdrop-filter: blur(5px);
 }
