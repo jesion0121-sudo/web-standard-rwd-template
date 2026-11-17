@@ -8,40 +8,75 @@
     <link rel="stylesheet" href="./css/media.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <title>노는게제일좋아</title>
 </head>
 
 <body>
     <header id="top">
-        <h1 class="logo">
-            🎈 노는 게 제일 좋아
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#posts">최근글</a></li>
-                <li><a href="#inform">축제 정보</a></li>
-                <li><a href="#photos">사진첩</a></li>
-            </ul>
-        </nav>
+        <div class="inner">
+            <h1 class="logo">
+                🎈 노는 게 제일 좋아
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#posts">최근글</a></li>
+                    <li><a href="#inform">축제 정보</a></li>
+                    <li><a href="#photos">사진첩</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="m-nav-btn">
+                <span>0</span>
+                <span>1</span>
+                <span>2</span>
+            </a>
+        </div>
     </header>
     <section class="hero">
-        <div class="hero-txt">
-            <p class="sub">my hobby blog</p>
-            <h2>
-                <span>대</span>
-                <span>한</span>
-                <span>민</span>
-                <span>국</span>
-                <span>축</span>
-                <span>제</span>
-                <span>모</span>
-                <span>음</span>
-            </h2>
-            <p>우리나라 각 지역의 유명한 축제 정보를 모았습니다.</p>
-            <a href="#posts" class="btn">최신 글 보기</a>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide s01">
+                    <div class="hero-txt">
+                        <p class="sub">my hobby blog</p>
+                        <h2>
+                            <span>대</span>
+                            <span>한</span>
+                            <span>민</span>
+                            <span>국</span>
+                            <span>축</span>
+                            <span>제</span>
+                            <span>모</span>
+                            <span>음</span>
+                        </h2>
+                        <p>우리나라 각 지역의 유명한 축제 정보를 모았습니다.</p>
+                        <a href="#posts" class="btn">최근글 보기</a>
+                    </div>
+                </div>
+                <div class="swiper-slide s02">
+                    <div class="inner">
+                        <h2>벌교 꼬막 축제</h2>
+                        <p>꼬막 캐기 체험과 다양하게 준비된 꼬막 음식들</p>
+                        <a href="#inform" class="btn">축제 정보 보러가기</a>
+                    </div>
+                </div>
+                <div class="swiper-slide s03">
+                    <div class="inner">
+                        <h2>포천 펫스타</h2>
+                        <p>다양한 반려동물들과 즐기는 액티비티</p>
+                        <a href="#inform" class="btn">축제 정보 보러가기</a>
+                    </div>
+                </div>
+                <div class="swiper-slide s04">
+                    <div class="inner">
+                        <h2>소란스런 가을밤</h2>
+                        <p>소란과 함께 하는 뮤직 페스타</p>
+                        <a href="#inform" class="btn">축제 정보 보러가기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <img src="./img/불꽃놀이png.png" alt="불꽃놀이1" class="pin1">
-        <img src="./img/불꽃놀이png2.png" alt="불꽃놀이2" class="pin2">
     </section>
     <main>
         <section class="profile">
@@ -62,7 +97,8 @@
             <h2>최근 글</h2>
             <article class="post">
                 <div class="thumb">
-                    <img src="./img/popular1.png" alt="부산불꽃축제"><span class="date">11.06</span>
+                    <span class="bg"></span>
+                    <span class="date">11.06</span>
                 </div>
                 <div class="info">
                     <div class="cate">최근 축제 뉴스</div>
@@ -75,7 +111,7 @@
             </article>
             <article class="post">
                 <div class="thumb">
-                    <img src="./img/pick2.png" alt="경복궁야간개장">
+                    <span class="bg"></span>
                     <span class="date">08.25</span>
                 </div>
                 <div class="info">
@@ -89,7 +125,7 @@
             </article>
             <article class="post">
                 <div class="thumb">
-                    <img src="./img/중랑 장미축제.jpeg" alt="중랑장미축제">
+                    <span class="bg"></span>
                     <span class="date">05.10</span>
                 </div>
                 <div class="info">
@@ -258,7 +294,7 @@
                         </article>
                     </li>
                 </ol>
-                </div>
+            </div>
         </section>
         <section id="photos">
             <h2>사진첩</h2>
@@ -284,13 +320,14 @@
                     <p>머드축제</p>
                 </li>
             </ul>
-            
+
         </section>
     </main>
     <footer>
         <p>© 2026 노는 게 제일 좋아</p>
     </footer>
     <button class="top">TOP</button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
 

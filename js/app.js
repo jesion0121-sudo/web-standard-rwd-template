@@ -1,10 +1,27 @@
 const body = document.querySelector('body')
 const topBtn = document.querySelector('.top')
-const mnavBtn = document.querySelector('.m-nav-open')
-const navBtns = document.querySelectorAll('nav ul li a')
+const mnavBtn = document.querySelector('.m-nav-btn')
+const navBtns = document.querySelectorAll('#top nav ul li a')
 const tabs = document.querySelectorAll('#inform ul li');
 const panels = document.querySelectorAll('#inform .inform-poster > li');
 
+
+
+
+
+
+
+
+// .hero slide
+var swiper = new Swiper('.mySwiper', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    loop:true
+});
+
+// #inform tabs
 tabs[0].classList.add('active');
 panels[0].classList.add('active');
 tabs.forEach(function (tab, i) {
@@ -20,9 +37,24 @@ tabs.forEach(function (tab, i) {
     });
 })
 
-// body.classList.add('blur')
-// body.classList.add('scroll')
 
+
+navBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        
+        const id = btn.getAttribute('href')
+        const target = document.querySelector(id)
+        const headerH = document.querySelector('header').offsetHeight
+        window.scrollTo({
+            top: target.offsetTop - headerH,
+            behavior: 'smooth'
+        })
+        body.classList.remove('m-nav-open')
+    })
+})
+
+// top scroll
 window.addEventListener('scroll', () => {
     console.log(window.scrollY);
     if (window.scrollY > 20) {
@@ -44,17 +76,5 @@ mnavBtn.addEventListener('click', (e) => {
     body.classList.toggle('m-nav-open')
 })
 
-navBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault()
 
-        const id = btn.getAttribute('href')
-        const target = document.querySelector(id)
-        const headerH = document.querySelector('header').offsetHeight
-        window.scrollTo({
-            top: target.offsetTop - headerH,
-            behavior: 'smooth'
-        })
-        body.classList.remove('m-nav-open')
-    })
-})
+
