@@ -43,7 +43,7 @@ h3 {
     z-index: 3;
 }
 
-#top .inner{
+#top .inner {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -64,6 +64,7 @@ h1 {
     gap: 2.8rem;
     font-size: 1.6rem;
 }
+
 #top nav li a {
     color: #000;
 
@@ -169,6 +170,7 @@ h1 {
 .swiper-slide.s01 {
     background-image: url(../img/s01.png);
 }
+
 .swiper-slide.s02 {
     color: white;
     background-image: url(../img/s02.png);
@@ -186,9 +188,11 @@ h1 {
 .swiper-slide.s02 .inner {
     align-items: flex-end;
 }
+
 .swiper-slide.s03 .inner {
     align-items: flex-start;
 }
+
 .swiper-slide.s04 .inner {
     align-items: flex-end;
 }
@@ -200,7 +204,7 @@ main h2 {
 }
 
 main {
-    padding: 0.7rem;
+    padding: 1rem;
     margin: auto;
     width: 100%;
     position: relative;
@@ -293,7 +297,8 @@ main {
     text-transform: capitalize;
     cursor: pointer;
     font-size: 1.6rem;
-    transition: border-color .3s ease, transform .3 ease;
+    transition: color .3s ease, border-color .3s ease, transform .3s ease;
+    transform: scale(1);
 }
 
 #inform ul li:hover {
@@ -301,6 +306,7 @@ main {
 }
 
 #inform ul li.active {
+    transform: scale(1.05);
     font-weight: bold;
     border-bottom: 3px solid #FF4F9A;
     text-transform: uppercase;
@@ -498,7 +504,7 @@ main {
     z-index: 1;
 }
 
-.thumb .bg{
+.thumb .bg {
     width: 100%;
     background-color: #D3E4F5;
     height: 100%;
@@ -511,26 +517,26 @@ main {
     background-position: center;
     transform: scale(1);
     transition: all .3s;
-    }
+}
 
-article:nth-child(2) .bg{
+article:nth-child(2) .bg {
     background-image: url(../img/bg01.png);
 }
-article:nth-child(3) .bg{
+
+article:nth-child(3) .bg {
     background-image: url(../img/bg02.png);
     object-position: top;
 }
-article:nth-child(4) .bg{
+
+article:nth-child(4) .bg {
     background-image: url(../img/bg03.png);
     background-position: center;
 }
 
 
-#posts article:nth-child(2) img {
-}
+#posts article:nth-child(2) img {}
 
-#posts article:nth-child(3) img {
-}
+#posts article:nth-child(3) img {}
 
 #posts article:nth-child(4) img {
     object-position: center 78%;
@@ -675,4 +681,3 @@ body.scroll header {
     background-color: #ffffffb3;
     backdrop-filter: blur(5px);
 }
-

@@ -33,7 +33,7 @@
   
 
   #top .inner{
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .m-nav-open nav {
@@ -81,6 +81,7 @@
 
 @media screen and (max-width: 768px) {
   #top {
+    padding: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -89,6 +90,10 @@
 
   #top ul {
     gap: 1.6rem;
+  }
+
+  #top h1{
+    font-size: 2rem;
   }
 
   .hero-txt h2 {
@@ -131,7 +136,7 @@
     flex-direction: column;
     /* width: 33.5rem; */
     gap: 1.6rem;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .thumb {
@@ -172,16 +177,34 @@
   #inform ul {
     justify-content: space-evenly;
     padding: 0;
+    gap: 0;
   }
+
+  #inform ul li {
+    font-size: 1rem;
+    transform: scale(1);
+    transition: color .3s ease, border-color .3s ease, transform .3s ease
+  }
+
+  #inform ul li.active {
+    transform: scale(1.15);
+  }
+
 
   #inform ul a {
     position: absolute;
     right: 0;
-    bottom: 2rem;
+    bottom: 0rem;
+    opacity: 0;
+  }
+  
+  #inform .inform-poster{
+    padding: 1.5rem;
   }
 
   #inform .inform-poster li.active {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   #inform .inform-poster article {
@@ -190,6 +213,7 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 4;
+    padding: 1rem;
   }
 
   #inform .inform-poster article .poster-img {
