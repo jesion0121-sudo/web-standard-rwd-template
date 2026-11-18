@@ -76,6 +76,6 @@ mnavBtn.addEventListener('click', (e) => {
     body.classList.toggle('m-nav-open')
 })
 
-    AOS.init({duration: 1000});
+AOS.init();
 
 
