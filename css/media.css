@@ -76,7 +76,7 @@
   nav ul li+li {
     border-top: 1px solid #ffffff19;
   }
-
+}
 
 
 @media screen and (max-width: 768px) {
@@ -167,7 +167,7 @@
   }
 
   .top {
-    left: 94%;
+    right: 1%;
   }
 
   #inform>div {

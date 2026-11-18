@@ -117,7 +117,7 @@ h1 {
 
     0%,
     100% {
-        ;
+        
         transform: translateY(0);
     }
 
@@ -534,14 +534,6 @@ article:nth-child(4) .bg {
 }
 
 
-#posts article:nth-child(2) img {}
-
-#posts article:nth-child(3) img {}
-
-#posts article:nth-child(4) img {
-    object-position: center 78%;
-}
-
 .post:hover .thumb .bg {
     transform: scale(1.05);
 }
@@ -693,7 +685,7 @@ footer p {
     position: fixed;
     display: block;
     z-index: 2;
-    left: 95%;
+    right: 3%;
     bottom: 10rem;
     background-color: #1E2A44;
     color: #FFFFFF;
