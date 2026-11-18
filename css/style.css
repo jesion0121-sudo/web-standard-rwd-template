@@ -603,14 +603,50 @@ article:nth-child(4) .bg {
 }
 
 .photos li {
+    perspective: 1000px;
+}
+
+.photos li .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.photos li:hover .card {
+    transform: rotateY(180deg);
+}
+
+.photos li .front,
+.photos li .back {
+    position: absolute;
+    inset: 0;
+    border-radius: 1.2rem;
+    backface-visibility: hidden;
+}
+
+.photos li .front {
     background-color: #D3E4F5;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     justify-content: center;
     align-items: center;
-    border-radius: 1.2rem;
 }
+
+.photos li .back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.p1 .back { background-image: url(../img/back1.jpeg); }
+.p2 .back { background-image: url(../img/back2.png); }
+.p3 .back { background-image: url(../img/back3.png); }
+.p4 .back { background-image: url(../img/back4.png); }
+.p5 .back { background-image: url(../img/back5.png); }
 
 .photos li span {
     font-size: 6.2rem;

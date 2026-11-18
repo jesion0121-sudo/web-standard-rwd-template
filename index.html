@@ -7,19 +7,21 @@
     <title>노는게제일좋아</title>
     <meta name="description" content="우리나라의 지역 별 축제를 소개해요.">
     <meta name="keywords" content="축제, 대한민국, 소풍, 추억, 놀거리, 체험">
-    <meta name="author" content="Yun Jeong">
+    <meta name="author" content="뽀로로">
+    <link rel="icon" href="./img/balloon1.jpg" type="image/jpg" sizes="32x32">
     <meta property="og:type" content="website">
     <meta property="og:title" content="노는 게 제일 좋아">
     <meta property="og:description" content="흥미로운 지역 축제에 대해 소개하는 블로그">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="https://jesion0121-sudo.github.io/web-standard-rwd-template/img/s01.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:local" content="ko_KR">
+    <meta property="og:locale" content="ko_KR">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -105,7 +107,7 @@
         </section>
         <section id="posts">
             <h2>최근 글</h2>
-            <article class="post">
+            <article class="post" data-aos="fade-right" data-aos-delay="0">
                 <div class="thumb">
                     <span class="bg"></span>
                     <span class="date">11.06</span>
@@ -119,7 +121,7 @@
                     <a href="#" class="more">더 읽기</a>
                 </div>
             </article>
-            <article class="post">
+            <article class="post" data-aos="fade-left" data-aos-delay="50">
                 <div class="thumb">
                     <span class="bg"></span>
                     <span class="date">08.25</span>
@@ -133,7 +135,7 @@
                     <a href="#" class="more">더 읽기</a>
                 </div>
             </article>
-            <article class="post">
+            <article class="post" data-aos="fade-right" data-aos-delay="100">
                 <div class="thumb">
                     <span class="bg"></span>
                     <span class="date">05.10</span>
@@ -310,24 +312,44 @@
             <h2>사진첩</h2>
             <ul class="photos">
                 <li class="p1">
-                    <span>🍙</span>
-                    <p>김밥축제</p>
+                    <div class="card">
+                        <div class="front"><span>🍙</span>
+                            <p>김밥축제</p>
+                        </div>
+                        <div class="back"></div>
+                    </div>
                 </li>
                 <li class="p2">
-                    <span>🔫</span>
-                    <p>워터밤</p>
+                    <div class="card">
+                        <div class="front"><span>🔫</span>
+                            <p>워터밤</p>
+                        </div>
+                        <div class="back"></div>
+                    </div>
                 </li>
                 <li class="p3">
-                    <span>🎆</span>
-                    <p>서울세계불꽃축제</p>
+                    <div class="card">
+                        <div class="front"><span>🎆</span>
+                            <p>서울세계불꽃축제</p>
+                        </div>
+                        <div class="back"></div>
+                    </div>
                 </li>
                 <li class="p4">
-                    <span>🐟</span>
-                    <p>산천어축제</p>
+                    <div class="card">
+                        <div class="front"><span>🐟</span>
+                            <p>산천어축제</p>
+                        </div>
+                        <div class="back"></div>
+                    </div>
                 </li>
                 <li class="p5">
-                    <span>🦀</span>
-                    <p>머드축제</p>
+                    <div class="card">
+                        <div class="front"><span>🦀</span>
+                            <p>머드축제</p>
+                        </div>
+                        <div class="back"></div>
+                    </div>
                 </li>
             </ul>
 
@@ -337,6 +359,7 @@
         <p>© 2026 노는 게 제일 좋아</p>
     </footer>
     <button class="top">TOP</button>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
